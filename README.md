@@ -8,13 +8,13 @@ Zip files Descriptions:
 
 Files_1.zip contains 4 folders, including:
 
-	- Beta_lactamases_subgroups: Contains 5 folders with the alignments for all classes of β-lactamases, along with Active_site_motifs.xlsx, which summarizes the active site motifs for each subgroup.
+	 1- Beta_lactamases_subgroups: Contains 5 folders with the alignments for all classes of β-lactamases, along with Active_site_motifs.xlsx, which summarizes the active site motifs for each subgroup.
 
-	- HMM_files: Includes HMM files for all classes of β-lactamases and RecA (collected from the GTDB HMM database).
+	 2- HMM_files: Includes HMM files for all classes of β-lactamases and RecA (collected from the GTDB HMM database).
 
-	- Non_Beta_lactamase_subgroups: Contains 5 folders with alignments for all classes of non-β-lactamases, along with Summary_non-Beta_lactamase.xlsx, which summarizes the structural motifs, active site motifs, and phylogenetic placements of non-β-lactamase subgroups.
+	 3- Non_Beta_lactamase_subgroups: Contains 5 folders with alignments for all classes of non-β-lactamases, along with Summary_non-Beta_lactamase.xlsx, which summarizes the structural motifs, active site motifs, and phylogenetic placements of non-β-lactamase subgroups.
 
-	- Sequence_files: Includes sequence files for all classes of β-lactamases, as well as RecA.
+	 4- Sequence_files: Includes sequence files for all classes of β-lactamases, as well as RecA.
 
 Files_2.zip contains:
 		6 folders, each corresponding to structural data for a specific class or subclass—including metallo-β-lactamases (MBLs)—of non-β-lactamase proteins.
