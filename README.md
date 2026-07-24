@@ -46,6 +46,7 @@ Files_3.zip contains:
 # β-Lactamase Meta-SSN Sequence Mapper
 
 This tool screens protein sequences against the β-lactamase meta-sequence similarity network (meta-SSN) developed in this study. It combines HMMER screening with BLASTP remapping against curated reference sequences to assign candidate proteins to β-lactamase classes and meta-SSN subgroups.
+Tool link : https://drive.google.com/file/d/1k-2N9c8am2TixGGibQEf4yS2NJl-Rcew/view?usp=drive_link
 
 ## Requirements
 
