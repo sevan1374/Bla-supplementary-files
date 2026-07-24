@@ -39,3 +39,59 @@ Files_3.zip contains:
 	File names follow the same format:
 	"subgroup_name" + "_" + "class_" + "beta_lactamase_class"
 	Each HTML file includes both structural and sequence alignments for the respective subgroup.
+
+
+
+
+# β-Lactamase Meta-SSN Sequence Mapper
+
+This tool screens protein sequences against the β-lactamase meta-sequence similarity network (meta-SSN) developed in this study. It combines HMMER screening with BLASTP remapping against curated reference sequences to assign candidate proteins to β-lactamase classes and meta-SSN subgroups.
+
+## Requirements
+
+* Python 3
+* Biopython
+* HMMER
+* BLAST+
+
+The required dependencies can be installed using:
+
+```bash
+conda create -n bla-ssn -c conda-forge -c bioconda \
+    python=3.11 biopython hmmer blast
+conda activate bla-ssn
+```
+
+## Usage
+
+Run all available β-lactamase classes:
+
+```bash
+python screen_betalactamases.py \
+    --input user_sequences.faa \
+    --db blactamase_ssn_db \
+    --out mapping_results \
+    --threads 8
+```
+
+Run selected classes only:
+
+```bash
+python screen_betalactamases.py \
+    --input user_sequences.faa \
+    --db blactamase_ssn_db \
+    --out mapping_results \
+    --threads 8 \
+    --families A B1 B3 C D
+```
+
+`--input` may be a single protein FASTA file or a directory containing FASTA files.
+
+## Main outputs
+
+* `true_positive_mapping.tsv`: accepted sequences and their predicted classes and meta-SSN subgroups
+* `true_positive_sequences.faa`: FASTA file containing accepted sequences
+* `false_positive_or_unmapped.tsv`: HMM candidates that could not be mapped above the class-specific threshold
+* `ambiguous_multi_class_true_positives.tsv`: sequences assigned to more than one β-lactamase class
+
+Assignments represent sequence-based predictions according to the thresholds and reference dataset used in this study and do not by themselves demonstrate β-lactamase activity.
